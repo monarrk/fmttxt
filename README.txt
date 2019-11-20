@@ -1,7 +1,7 @@
 
 
 
-     fmtxt
+     fmttxt
 
      Format your text into a pretty lookin' paper.
 
