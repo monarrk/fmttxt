@@ -26,7 +26,6 @@ int main(int argc, char *argv[]) {
 	int posy = 0;
 	int pgnum = 1;
 
-	data = malloc(1000);
 	while ((c = fgetc(fp)) != EOF) {
 		// new page
 		if (posx == 0 && posy == 0) {
@@ -66,9 +65,11 @@ int main(int argc, char *argv[]) {
 		}
 	}
 
-	data[n] = '\0';
-
-	printf("%s\n", data);
+	// finish off page
+	for (int i=0; i < posy; i++) {
+		printf("\n");
+	}
+	printf("\n\n     %d\n\n\n", pgnum);
 
 	return 0;
 }
